@@ -13,5 +13,5 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 
-WebUI.openBrowser('');
-WebUI.navigateToUrl(GlobalVariable.baseUrl);
+WebUI.navigateToUrl(GlobalVariable.baseUrl)
+

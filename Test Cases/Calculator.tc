@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Verify Divide</name>
+   <name>Calculator</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>bc26b184-3731-4550-9bdd-18fdbebfa4fc</testCaseGuid>
+   <testCaseGuid>898e0872-f487-47b2-9504-46bea0a2a9cb</testCaseGuid>
 </TestCaseEntity>
