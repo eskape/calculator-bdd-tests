@@ -46,15 +46,20 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class Common {
+class Calculator {
 
 	@Given("The Calculator page is loaded successfully")
 	def load_calculator_page() {
-		WebUI.callTestCase(findTestCase("Test Cases/common/The Calculator page is loaded successfully"), [:], FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase("Test Cases/actions/The Calculator page is loaded successfully"), [:], FailureHandling.STOP_ON_FAILURE)
+	}
+
+	@When("I use the {string} operation with {int} and {int}")
+	public void i_use_the_devide_operation_with_and(String operator, Integer value1, Integer value2) {
+		WebUI.callTestCase(findTestCase("Test Cases/actions/"+ operator +" number"), [ ('firstOperand') : value1, ('secondOperand') : value2 ], FailureHandling.STOP_ON_FAILURE)
 	}
 
 	@Then("I get the result (.*)")
 	def check_result(String result) {
-		WebUI.callTestCase(findTestCase('Test Cases/common/Check result'), [ ('result') : result ], FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase('Test Cases/actions/Check result'), [ ('result') : result ], FailureHandling.STOP_ON_FAILURE)
 	}
 }

@@ -24,12 +24,13 @@ import com.kms.katalon.core.context.TestSuiteContext
 
 class Listener {
 	
-	/**
-	 * Executes after every test case ends.
-	 * @param testCaseContext related information of the executed test case.
-	 */
+	@BeforeTestCase
+	def beforeTestCase(TestCaseContext testCaseContext) {
+		WebUI.openBrowser(null);
+	}
+	
 	@AfterTestCase
-	def sampleAfterTestCase(TestCaseContext testCaseContext) {
+	def afterTestCase(TestCaseContext testCaseContext) {
 		WebUI.closeBrowser();
 	}
 }
